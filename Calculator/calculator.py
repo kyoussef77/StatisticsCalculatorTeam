@@ -1,6 +1,5 @@
-from MathOperations.addition import Addition;
-from MathOperations.subtraction import Subtraction;
-from MathOperations.division import Division
+from MathOperations.MathOperations import *
+
 
 class Calculator:
     Result = 0
@@ -8,7 +7,7 @@ class Calculator:
     def __init__(self):
         pass
 
-    def Sum(self, a, b):
+    def Sum(self, a, b=0):
         self.Result = Addition.sum(a, b)
         return self.Result
 
@@ -16,6 +15,10 @@ class Calculator:
         self.Result = Subtraction.difference(a, b)
         return self.Result
 
-    def Division(self, a, b):
+    def Product(self, a, b=1):
+        self.Result = Multiplication.product(a, b)
+        return self.Result
+
+    def Quotient(self, a, b):
         self.Result = Division.quotient(a, b)
         return self.Result
