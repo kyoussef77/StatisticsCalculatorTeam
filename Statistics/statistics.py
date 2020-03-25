@@ -18,7 +18,6 @@ class Statistics(Calculator):
 
     def skew(self, data, axis, bias):
         self.Result = Skew.skew(data, axis, bias)
-        master
         return self.Result
       
     def variance(self,data):
@@ -27,3 +26,4 @@ class Statistics(Calculator):
 
     def standardDeviation(self,data):
         self.Result = StandardDeviation.standardDeviation(data)
+        return self.Result
