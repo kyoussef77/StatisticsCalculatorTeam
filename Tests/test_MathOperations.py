@@ -30,3 +30,13 @@ class MyTestCase(unittest.TestCase):
     def test_MathOperations_Product_list(self):
         numlist = [1, 3, 5]
         self.assertEqual(15, self.calculator.Product(numlist))
+
+    def test_MathOperations_Power(self):
+        self.assertEqual(8, self.calculator.Power(2, 3))
+
+    def test_MathOperations_Power_list(self):
+        numlist = [1, 2, 3]
+        self.assertEqual(9, self.calculator.Power(numlist, 2))
+
+    def test_Root(self):
+        self.assertEqual(3, self.calculator.Root(2,9))
