@@ -22,3 +22,11 @@ class Calculator:
     def Quotient(self, a, b):
         self.Result = Division.quotient(a, b)
         return self.Result
+
+    def Power(self, a, b):
+        self.Result = Exponentiation.power(a, b)
+        return self.Result
+
+    def Root(self, a, b):
+        self.Result = NthRoot.root(a, b)
+        return self.Result
