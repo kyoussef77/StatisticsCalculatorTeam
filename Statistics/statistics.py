@@ -27,3 +27,11 @@ class Statistics(Calculator):
     def standardDeviation(self,data):
         self.Result = StandardDeviation.standardDeviation(data)
         return self.Result
+
+    def covariance(self,data1,data2):
+        self.Result = Covariance.covariance(data1,data2)
+        return self.Result
+
+    def samplecorrelation(self,number,data1,data2):
+        self.Result = SampleCorrelation.correlation(number,data1,data2)
+        return self.Result

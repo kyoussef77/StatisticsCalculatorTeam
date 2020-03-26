@@ -4,6 +4,8 @@ from StatisticsOperations.mode import Mode
 from StatisticsOperations.skew import Skew
 from StatisticsOperations.variance import Variance
 from StatisticsOperations.StandardDeviation import StandardDeviation
+from StatisticsOperations.Covariance import Covariance
+from StatisticsOperations.samplecorrelation import SampleCorrelation
 
 def mean(data):
     return Mean.mean(data)
@@ -22,4 +24,10 @@ def variance(data):
 
 def standardDeviation(data):
     return StandardDeviation.standardDeviation(data)
+
+def covariance(data1, data2):
+    return Covariance.covariance(data1,data2)
+
+def samplecorrelation(number,data1,data2):
+    return SampleCorrelation.correlation(number,data1,data2)
 
