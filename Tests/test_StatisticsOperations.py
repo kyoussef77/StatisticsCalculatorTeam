@@ -48,4 +48,18 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.standardDeviation(data)
         self.assertEqual(1.2682658081265845, result)
 
+    def test_statistics_calculator_return_covariance(self):
+        data1 = [1,2,3,4]
+        data2 = [1,2,4,5]
+        result = self.statistics.covariance(data1,data2)
+        self.assertEqual(2.333333333333333, result)
+
+    def test_statistics_calculator_return_sample_correlation(self):
+        data1 = [1,2,3,4]
+        data2 = [1,2,4,5]
+        result = self.statistics.samplecorrelation(3,data1,data2)
+        self.assertEqual(0.1446890230103591, result)
+
+
+
 
