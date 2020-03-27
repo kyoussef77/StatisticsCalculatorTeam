@@ -35,3 +35,12 @@ class Statistics(Calculator):
     def samplecorrelation(self,number,data1,data2):
         self.Result = SampleCorrelation.correlation(number,data1,data2)
         return self.Result
+
+    def zscore(self, data):
+        self.Result = Zscore.zscore(data)
+        return self.Result
+
+    def quartile(self, data):
+        self.Result = Quartile.quartile(data)
+        return self.Result
+

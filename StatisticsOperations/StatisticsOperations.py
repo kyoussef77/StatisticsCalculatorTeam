@@ -6,6 +6,8 @@ from StatisticsOperations.variance import Variance
 from StatisticsOperations.StandardDeviation import StandardDeviation
 from StatisticsOperations.Covariance import Covariance
 from StatisticsOperations.samplecorrelation import SampleCorrelation
+from StatisticsOperations.zscore import Zscore
+from StatisticsOperations.Quartile import Quartile
 
 def mean(data):
     return Mean.mean(data)
@@ -31,3 +33,8 @@ def covariance(data1, data2):
 def samplecorrelation(number,data1,data2):
     return SampleCorrelation.correlation(number,data1,data2)
 
+def zscore(data):
+    return Zscore.zscore(data)
+
+def quartile(data):
+    return Quartile.quartile(data)

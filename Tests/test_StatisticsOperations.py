@@ -60,6 +60,15 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.samplecorrelation(3,data1,data2)
         self.assertEqual(0.1446890230103591, result)
 
+    def test_statistics_calculator_return_zscore(self):
+        data = [3, 5, 6, 5, 3, 2, 1, 40]
+        result = self.statistics.zscore(data)
+        self.assertEqual(-5.100990334813791, result)
+
+    def test_statistics_calculator_return_sample_correlation(self):
+        data1 = [1, 2, 3, 4]
+        result = self.statistics.quartile(data1)
+        self.assertEqual([1.75, 2.5, 3.25], result)
 
 
 
