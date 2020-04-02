@@ -36,8 +36,8 @@ class Statistics(Calculator):
         self.Result = SampleCorrelation.correlation(number,data1,data2)
         return self.Result
 
-    def zscore(self, data):
-        self.Result = Zscore.zscore(data)
+    def zscore(self,sd, data):
+        self.Result = Zscore.zscore(sd, data)
         return self.Result
 
     def quartile(self, data):
