@@ -3,7 +3,6 @@ from Statistics.statistics import Statistics
 
 
 class MyTestCase(unittest.TestCase):
-
     def setUp(self):
         self.statistics = Statistics()
         self.testData = [1, 2, 3, 4]
@@ -70,6 +69,16 @@ class MyTestCase(unittest.TestCase):
         data1 = [1, 2, 3, 4]
         result = self.statistics.quartile(data1)
         self.assertEqual([1.75, 2.5, 3.25], result)
+
+    def test_statistics_calculator_return_mean_deviation(self):
+        data = [1,2,3,3,4,4]
+        result = self.statistics.meandeviation(data)
+        self.assertEqual(0.8888888888888887,result)
+
+    def test_statistics_calculator_return_population_correlation(self):
+        data = [1,2,3,4]
+        data2 = [1,2,3,5]
+        self.assertEqual(0.906471998675645,  self.statistics.populationCorrelation(data,data2))
 
 
 

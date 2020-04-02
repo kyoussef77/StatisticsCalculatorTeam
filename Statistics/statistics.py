@@ -44,3 +44,10 @@ class Statistics(Calculator):
         self.Result = Quartile.quartile(data)
         return self.Result
 
+    def meandeviation(self,data):
+        self.Result = MeanDeviation.meanDeviation(data)
+        return self.Result
+
+    def populationCorrelation(self,data,data2):
+        self.Result = populationCorrelation.populationcorrelation(data,data2)
+        return self.Result
