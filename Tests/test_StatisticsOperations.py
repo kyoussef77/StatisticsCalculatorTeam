@@ -6,6 +6,9 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self):
         self.statistics = Statistics()
+        self.testData = [1, 2, 3, 4]
+        self.testData2 = [1, 2, 2, 3, 4]
+        self.testData3 = [1, 2, 4, 5]
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -60,10 +63,8 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.samplecorrelation(3,data1,data2)
         self.assertEqual(0.1446890230103591, result)
 
-    def test_statistics_calculator_return_zscore(self):
-        data = [3, 5, 6, 5, 3, 2, 1, 40]
-        result = self.statistics.zscore(data)
-        self.assertEqual(-5.100990334813791, result)
+    def test_StatisticFunctions_ZScore(self):
+        self.assertEqual(0.2871745887492588, self.statistics.zscore(4, self.testData))
 
     def test_statistics_calculator_return_sample_correlation(self):
         data1 = [1, 2, 3, 4]
